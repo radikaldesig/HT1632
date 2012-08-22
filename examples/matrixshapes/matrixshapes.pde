@@ -1,8 +1,8 @@
 #include "HT1632.h"
 
-#define DATA 2
-#define WR   3
-#define CS   4
+#define DATA 13
+#define WR   12
+#define CS   11
 #define CS2  5
 
 // use this line for single matrix
@@ -12,7 +12,7 @@ HT1632LEDMatrix matrix = HT1632LEDMatrix(DATA, WR, CS);
 
 void setup() {
   Serial.begin(9600);
-  matrix.begin(HT1632_COMMON_16NMOS);  
+  matrix.begin(HT1632_COMMON_8NMOS);  
   matrix.fillScreen();
   delay(500);
 
